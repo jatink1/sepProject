@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>SignUp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div id="signForm">
+    <form [formGroup]="signUpForm">
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" formControlName="signUpName" [(ngModel)]="ngName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" formControlName="signUpEmail" [(ngModel)]="ngEmail"></ion-input>
+      </ion-item>
+      <ion-item no-lines *ngIf="signUpForm.controls.signUpEmail.touched && signUpForm.controls.signUpEmail.dirty && signUpForm.controls.signUpEmail.hasError('email')">
+        <p>Please enter a valid E-mail</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="text" formControlName="signUpPassword" [(ngModel)]="ngPassword"></ion-input>
+      </ion-item>
+      <ion-item no-lines *ngIf="signUpForm.controls.signUpPassword.hasError('minlength')">
+        <p>Min length should be 6 char</p>
+      </ion-item>
+    </form>
+
+    <ion-buttons>
+      <button ion-button block (click)="submit()">Submit</button>
+    </ion-buttons>
+  </div>
+
+
+</ion-content>
