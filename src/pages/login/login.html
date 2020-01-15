@@ -1,29 +1,39 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>Login Page</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content padding>
 
-  <div id="formCss">
+  <div id="container">
+    <div id="inside">
     <form [formGroup]="loginForm">
       
-      <ion-item>
-        <ion-label>Email</ion-label>
-        <ion-input type="text" formControlName="loginEmail"></ion-input>
+      <ion-item class="inputCss">
+        <ion-label >Email</ion-label>
+        <ion-input type="text" formControlName="loginEmail" ></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Password</ion-label>
+      <ion-item class="inputCss">
+        <ion-label >Password</ion-label>
         <ion-input type="text" formControlName="loginPassword"></ion-input>
       </ion-item>
 
     </form>
-    <ion-buttons>
-      <button ion-button block (click)="login()">Login</button>
-      <button ion-button block (click)="signUp()">SignUp</button>
-    </ion-buttons>
-  </div>
 
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button block class="lbtn" (click)="login()">Login</button>
+      </ion-col>
+
+      <ion-col text-center>
+        <button ion-button block class="sbtn" (click)="signUp()">SignUp</button>
+      </ion-col>
+    </ion-row>
+
+  </div>
+</div>
 </ion-content>
+
+      

@@ -52,4 +52,8 @@ export class SignUpPage {
     this.navCtrl.popToRoot();
   }
 
+  close() {
+    this.navCtrl.pop();
+  }
+
 }
