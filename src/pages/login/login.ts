@@ -5,6 +5,7 @@ import { SignUpPage } from '../sign-up/sign-up';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { SubjectListPage } from '../subject-list/subject-list';
 
 @IonicPage()
 @Component({
@@ -43,7 +44,7 @@ export class LoginPage {
       if (this.loginEmail.value === val['uemail'] && this.loginPassword.value === val['upassword'])
       {
         this.storage.set('loginKey', this.loginEmail.value);
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(SubjectListPage);
         this.navCtrl.popToRoot();
       }
 

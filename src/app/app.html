@@ -1,1 +1,30 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+
+<ion-menu [content]="content" id="myMenu">
+    <ion-content>
+        <ion-item no-lines>
+            <ion-list>
+
+                <ion-item menuClose>
+                
+                        My Account
+                    
+                </ion-item>
+                
+                <ion-item menuClose>
+                
+                        Settings
+                    
+                </ion-item>
+
+                <ion-item menuClose (click)="logout()">
+                
+                        Logout
+                    
+                </ion-item>
+            </ion-list>
+        </ion-item>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

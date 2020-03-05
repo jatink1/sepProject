@@ -33,5 +33,11 @@ export class MyApp {
       })
     });
   }
+
+  logout() {
+    this.storage.set('loginKey', 1);
+    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.popToRoot();
+  }
 }
 
