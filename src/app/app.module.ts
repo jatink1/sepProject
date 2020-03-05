@@ -9,13 +9,17 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { IonicStorageModule } from '@ionic/storage';
+import { SubjectListPage } from '../pages/subject-list/subject-list';
+import { Subject1DetailsPage } from '../pages/subject1-details/subject1-details';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    SignUpPage
+    SignUpPage,
+    SubjectListPage,
+    Subject1DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { IonicStorageModule } from '@ionic/storage';
     MyApp,
     HomePage,
     LoginPage,
-    SignUpPage
+    SignUpPage,
+    SubjectListPage,
+    Subject1DetailsPage
   ],
   providers: [
     StatusBar,

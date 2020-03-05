@@ -5,8 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { Storage } from '@ionic/storage';
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
 import { NavController } from 'ionic-angular';
+import { SubjectListPage } from '../pages/subject-list/subject-list';
 @Component({
   templateUrl: 'app.html'
 })
@@ -26,7 +27,7 @@ export class MyApp {
       this.storage.get('loginKey').then((val) => {
         if (val != 1)
         {
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.setRoot(SubjectListPage);
           this.navCtrl.popToRoot();
         }
       })
