@@ -1,6 +1,7 @@
+<!-- signUp page -->
 <ion-header no-border clear>
   <ion-navbar hideBackButton color="navGreen">
-    
+    <!-- button to close this page -->
     <ion-buttons end>
       <button ion-button large (click)="close()">
         <ion-icon name="md-close"></ion-icon>
@@ -14,28 +15,35 @@
   <div id="container">
     <div id="inside">
     <form [formGroup]="signUpForm">
+
+      <!-- to take name as input -->
       <ion-item class="inputCss">
         <ion-label>Name</ion-label>
         <ion-input type="text" formControlName="signUpName" [(ngModel)]="ngName"></ion-input>
       </ion-item>
 
+      <!-- for email input -->
       <ion-item class="inputCss">
         <ion-label>Email</ion-label>
         <ion-input type="text" formControlName="signUpEmail" [(ngModel)]="ngEmail"></ion-input>
       </ion-item>
+      <!-- warning if invalid email -->
       <ion-item no-lines *ngIf="signUpForm.controls.signUpEmail.touched && signUpForm.controls.signUpEmail.dirty && signUpForm.controls.signUpEmail.hasError('email')">
         <p>Please enter a valid E-mail</p>
       </ion-item>
 
+      <!-- for password input -->
       <ion-item class="inputCss">
         <ion-label>Password</ion-label>
         <ion-input type="text" formControlName="signUpPassword" [(ngModel)]="ngPassword"></ion-input>
       </ion-item>
+      <!-- warning if password length less than 6 characters -->
       <ion-item no-lines *ngIf="signUpForm.controls.signUpPassword.hasError('minlength')">
         <p>Min length should be 6 char</p>
       </ion-item>
     </form>
 
+    <!-- submit button -->
     <ion-buttons>
       <button ion-button block (click)="submit()" class="sbtn">Submit</button>
     </ion-buttons>

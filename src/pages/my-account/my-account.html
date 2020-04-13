@@ -1,0 +1,21 @@
+<!-- page to show user his/her own details -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let detail of details" >    
+    <!-- user name -->
+    <ion-item>
+      {{detail.name}}
+    </ion-item>
+
+    <!-- user email -->
+    <ion-item>
+      {{detail.email}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

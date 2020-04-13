@@ -1,33 +1,31 @@
-<!--<ion-header>
-  <ion-navbar>
-    <ion-title>Login Page</ion-title>
-  </ion-navbar>
-</ion-header>-->
-
+<!-- Login Page -->
 <ion-content padding>
 
   <div id="container">
     <div id="inside">
-    <form [formGroup]="loginForm">
-      
+    <form [formGroup]="loginForm">      
+      <!-- input for email -->
       <ion-item class="inputCss">
         <ion-label >Email</ion-label>
-        <ion-input type="text" formControlName="loginEmail" ></ion-input>
+        <ion-input type="text" formControlName="loginEmail" [(ngModel)]="email"></ion-input>
       </ion-item>
 
+      <!-- input for password -->
       <ion-item class="inputCss">
         <ion-label >Password</ion-label>
-        <ion-input type="text" formControlName="loginPassword"></ion-input>
+        <ion-input type="text" formControlName="loginPassword" [(ngModel)]="password"></ion-input>
       </ion-item>
-
     </form>
 
+    <!-- login and submit buttons -->
     <ion-row>
       <ion-col text-center>
+        <!-- login button -->
         <button ion-button block class="lbtn" (click)="login()">Login</button>
       </ion-col>
 
       <ion-col text-center>
+        <!-- sign button -->
         <button ion-button block class="sbtn" (click)="signUp()">SignUp</button>
       </ion-col>
     </ion-row>

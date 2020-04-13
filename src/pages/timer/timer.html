@@ -1,0 +1,47 @@
+<!-- timer page -->
+<ion-header>
+  <ion-navbar>
+    <ion-title> Timer </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- To Show timer -->
+  <div >
+    <h1 text-center class="color-white font-lg">
+      {{time}}
+    </h1>    <ion-grid>
+    <ion-row text-center class="mt-5">
+      <ion-col class="col-12" *ngIf="!running && time == blankTime">
+        <!-- timer start button -->
+        <button ion-button (tap)="start()">{{ 'Start'}}</button>
+      </ion-col>
+      <ion-col class="col-12" *ngIf="running">
+
+        <!-- Timer stop/cancel buttons -->
+        <ion-buttons>
+          <button ion-button (tap)="stop()">{{ 'Stop'  }}</button>
+          <button ion-button (tap)="cancel()"> {{ 'Cancel' }}</button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+<!-- to write subject name -->
+<ion-item *ngIf="!running && time != blankTime">
+  <ion-label floating>Subject Time</ion-label>
+  <ion-input type="text" [(ngModel)]="subjectName"></ion-input>
+</ion-item>
+<!-- for writing unit name -->
+<ion-item *ngIf="!running && time != blankTime">
+  <ion-label floating>Unit Name</ion-label>
+  <ion-input type="text" [(ngModel)]="unitName"></ion-input>
+</ion-item>
+
+<!-- save button once timer is stopped -->
+<ion-buttons *ngIf="!running && time != blankTime">
+  <button ion-button (click)="save()">Save</button>
+</ion-buttons>
+
+</ion-content>

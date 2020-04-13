@@ -1,60 +1,34 @@
-
+<!-- page to view units of particular subject -->
 <ion-header>
   <ion-navbar>
-    <ion-title>subject1Details</ion-title>
+    <ion-title>Units</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <!-- Unit 1 -->
-  <ion-card>
+  <!-- buttons -->
+  <ion-fab right bottom>
+    <button ion-fab ><ion-icon name="ios-arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <!-- add unit button -->
+      <button ion-fab (click)="addUnit()"><ion-icon name="add"></ion-icon> </button>
+      <!-- timer button -->
+      <button ion-fab (click)="startTimer()"><ion-icon name="ios-timer"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- View Units -->
+  <ion-card *ngFor="let detail of details; let i = index;">
     <ion-card-content>
       <ion-row>
         <ion-col >
-          Unit 1
+          {{i+1}}. {{detail.unitName}} 
         </ion-col>
-    
         <ion-col style="text-align: end;">
-          3 hrs
+          {{detail.time}}
         </ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
-
-  <!-- Unit 2 -->
-  <ion-card>
-    <ion-card-content>
-      Unit 2
-    </ion-card-content>
-  </ion-card>
-
-  <!-- Unit 3 -->
-  <ion-card>
-    <ion-card-content>
-      Unit 3
-    </ion-card-content>
-  </ion-card>
-
-  <!-- Unit 4 -->
-  <ion-card>
-    <ion-card-content>
-      Unit 4
-    </ion-card-content>
-  </ion-card>
-
-  <!-- Unit 5 -->
-  <ion-card>
-    <ion-card-content>
-      Unit 5
-    </ion-card-content>
-  </ion-card>
-
-  <!-- Unit 6 -->
-  <ion-card>
-    <ion-card-content>
-      Unit 6
-    </ion-card-content>
-  </ion-card>
-
 </ion-content>

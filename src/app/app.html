@@ -1,26 +1,19 @@
-
-
+<!-- //code for side menu -->
 <ion-menu [content]="content" id="myMenu">
     <ion-content>
         <ion-item no-lines>
+            <!-- Options in side menu -->
             <ion-list>
-
-                <ion-item menuClose>
-                
-                        My Account
-                    
+                <ion-item menuClose (click)="timer()">
+                        Timer
                 </ion-item>
-                
-                <ion-item menuClose>
-                
+
+                <ion-item menuClose (click)="settings()">
                         Settings
-                    
                 </ion-item>
 
                 <ion-item menuClose (click)="logout()">
-                
                         Logout
-                    
                 </ion-item>
             </ion-list>
         </ion-item>

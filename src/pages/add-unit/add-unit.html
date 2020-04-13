@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add New Unit</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <br>
+  <br>
+  <!-- for taking unit name as input -->
+  <ion-item >
+    <ion-label floating>Unit Name</ion-label>
+    <ion-input type="text" [(ngModel)]="unitName"></ion-input>
+  </ion-item>
+
+  <!-- for taking subject name as input -->
+  <ion-item>
+    <ion-label floating>Subject Name</ion-label>
+    <ion-input type="text" [(ngModel)]="subjectName"></ion-input>
+  </ion-item>
+
+  <!-- button to add new unit -->
+  <ion-buttons>
+    <button ion-button  full  (click)="addUnit()"> Add </button>
+  </ion-buttons>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<!-- settings page -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- button to redirect to userDetails/MyAccount page -->
+  <ion-card (click)="myAccount()">
+    <ion-card-content>
+      <ion-item>
+        My Account
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- button to turn on/off notifications -->
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

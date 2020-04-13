@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add New Subject</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--input for entering new subject name -->
+  <ion-item style="margin-top: 50%;">
+    <ion-label floating>Subject Name</ion-label>
+    <ion-input type="text" [(ngModel)]="subjectName"></ion-input>
+  </ion-item>
+
+  <!-- button which will add the subject by calling function addSubject()-->
+  <ion-buttons>
+    <button ion-button  full (click)="addSubject()"> Add </button>
+  </ion-buttons>
+
+
+</ion-content>
